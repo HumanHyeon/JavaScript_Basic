@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//=
+	a = 3;
+	alert(a);
+	alert(b = 4);
+
+	//==
+	alert(1 == 1);
+	alert("one" == "one");
+	alert("one" == "two");
+
+	//=== strict
+	alert(1 === '1');	//false
+	//alert(1 == "1")	//true
+	alert(1 === 1);
+
+	var c;	//undefined;
+	var d = null;
+
+	alert(c);
+	alert(d);
+	alert(null == undefined);	//true
+	alert(null === undefined);	//false
+
+	alert(true == 1);	//true
+	alert(true === 1);	//false
+	alert(true == '1');		//true
+	alert(true === '1');	//false
+
+	alert(true == 2);	//false
+
+	alert(0 === -0);	//true
+	alert(NaN === NaN);	//false
+
+	//!=
+	alert(1 != 2);	//true
+	alert(1 != 1);	//false
+	alert("one" != "two");	//true;
+	alert("one" != "one");	//false;
+
+	//!==	-> 	=== 와 기능 동일(정확하게 같지 않다.)
+
+	//>
+	alert(10 > 20);	//false
+	alert(10 > 1);	//true
+
+	// >=
+	alert(10 >= 20);	//false
+	alert(10 >= 1);		//true
+	alert(10 >= 10);	//true
+</script>
+</body>
+</html>

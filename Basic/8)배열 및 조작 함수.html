@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//선언
+	var member = ['user01', 'user02', 'user03'];	//파이썬의 list와 동일
+	
+	//사용
+	function get_members(){
+		return ['user01', 'user02', 'user03'];
+	}
+	mem = get_members();
+	for(var i = 0; i < mem.length; i++){		//length	
+		document.write(mem[i].toUpperCase());	//toUpperCase()
+		document.write("<br />");
+	}
+
+	//조작(삽입)
+	var arr = [1, 2, 3, 4, 5];
+
+	function printArr(arg){
+		for (var i = 0; i < arg.length; i++)
+			document.write(arg[i] + ' ');
+		document.write('<br />');
+	}
+
+	document.write(arr.length)	//크기 확인
+	document.write('<br />')
+
+	arr.push(6);	//push : 배열 끝에 원소 추가
+	printArr(arr);
+
+	arr = arr.concat([7, 8]);	//concat : 배열 끝에 배열(복수의 원소)을 추가 후 리턴
+	printArr(arr);
+
+	arr.unshift(0);	//unshift : 배열 처음에 원소 추가
+	printArr(arr);
+
+	//splice(offset, count(expected remove), insert_element1, insert_element2 ... elementN)
+	arr.splice(1, 3, -999, 999);	//인덱스1부터 3개의 원소를 삭제 후 -999와 999를 삽입
+	printArr(arr);
+
+
+	//조작(삭제)
+	var arr = [1, 2, 3, 4, 5];
+
+	arr.shift();	//shift : 첫 번째 원소 제거
+	printArr(arr);
+
+	arr.pop();		//pop : 끝 원소 제거
+	printArr(arr);		
+
+
+	//조작(정렬)
+	var arr = [5, 4, 3, 2, 1];
+	
+	arr.sort();
+	printArr(arr);
+
+	arr.reverse();
+	printArr(arr);
+
+</script>
+</body>
+</html>

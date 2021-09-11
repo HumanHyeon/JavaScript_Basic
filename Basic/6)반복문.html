@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+Hello World; <br />
+Hello World; <br />
+Hello World; <br />
+
+<script type="text/javascript">
+	document.write("Coding <br />");
+	
+	//while
+	i = 5;
+	 while (i--){
+		document.write("Coding <br />");
+	}
+
+	//for
+	for (var i = 0; i < 5; i++){
+		document.write("JavaScript <br />");
+	}
+
+	//do - while;
+	i = 5;
+	do{
+		document.write("Java <br />");
+	}while(i--)
+
+	//break;
+	for (var i = 0; i < 10; i++){
+		if (i == 5)
+			break;
+		document.write("Python <br />");
+	}
+
+	//continue;
+	for (var i = 0; i < 10; i++){
+		if (i % 2 == 0)
+			continue;
+		document.write("C " + i + " <br />");
+	}
+
+	//반복문 중첩;
+	for (var i = 0; i < 10; i++){
+		for (var j = 0; j < 10; j++){
+			document.write('문자를 추가해서 문자로 변경' + i + j + '<br />');
+		}
+	}
+
+</script>
+</body>
+</html>

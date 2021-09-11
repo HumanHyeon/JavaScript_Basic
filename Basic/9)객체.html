@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<ul>
+<li>list01</li>
+<li>list02</li>
+<li>list03</li>
+</ul>
+
+<script type="text/javascript">
+	//선언
+	var grades = {'user01' : 10, 'user02' : 20, 'user03' : 30 };	//파이썬의 dictionary와 동일
+
+	var fruits = {};
+	fruits['apple'] = 10;
+	fruits['oragne'] = 20;
+	fruits['manggo'] = 30;
+
+	var students = new Object();	//{}대신 사용
+ 
+	//접근
+ 	document.write(grades['user01']);
+ 	document.write(grades.user02);
+ 	document.write(grades['user' + '03']);
+ 	//document.write(grades.'user' + '03');	//불가
+
+ 	//반복문	for each
+ 	document.write("<br />");
+ 	for (key in grades){	// for(key in 객체)
+ 		document.write("key : " + key + " value : " + grades[key] + "<br />");
+ 	}
+
+ 	for (key in grades){	// <li>와 함께 사용
+ 		document.write("<li>key : " + key + " value : " + grades[key] + "</li>");
+ 	}
+
+ 	//응용 (객체 안 데이터형)
+ 	var grades = {
+ 		'list' : {'li01' : 10, 'li02' : 5, 'li03' : 2},
+ 		'show' : function(){
+ 			document.write('Inner Object <br />');
+ 		},
+ 		'display' : function(){
+ 			for (var name in this.list){
+ 				document.write(name + " <-> " + this.list[name] + "<br />");
+ 			}
+ 			console.log(this.list);	
+ 		}
+ 	};
+ 	
+ 	document.write(grades['list']['li01']);		document.write("<br />");
+ 	document.write(grades.list.li02);			document.write("<br />");
+ 	document.write(grades['list'].li03);		document.write("<br />");
+ 	
+ 	grades['show']();							document.write("<br />");
+
+ 	grades.display();	//grades['display']();
+
+</script>
+</body>
+</html>
